@@ -1,0 +1,8 @@
+{
+  "typescript.validate.enable": true,
+  "javascript.validate.enable": false,
+  "cSpell.words": [
+    "eqeqeq"
+  ],
+  "liveServer.settings.port": 5501
+}
