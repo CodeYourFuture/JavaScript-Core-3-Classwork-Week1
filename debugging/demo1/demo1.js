@@ -1,16 +1,35 @@
-let printValuesOf = (jsObject, keys) => {
-  for (let i = 0; i <= keys.length; i++) {
-    let key = keys[i];
-    console.log(jsObject[k]);
-  }
-}
+const tomatoes = 'tomatoes';
+const chocolate= 'chocolate'yummy';
+const yogurt = 'yogurt';
+const rice = "rice";
 
-let simpsonsCatchphrases = {
-  lisa: 'BAAAAAART!',
-  bart: 'Eat My Shorts!',
-  marge: 'Mmm~mmmmm',
-  homer: 'd'oh!',
-  maggie: '(Pacifier Suck)',
+const fridge =[{ item: tomatoes, quantity: 5},
+         { item: chocolate, quantity: 1},
+         { item: yogurt, quantity: 5}];
+
+const wantedList = [{ item: tomatoes, quantity: 4},
+  { item: chocolate, quantity: 10},
+  { item: yogurt, quantity: 2}]
+
+const shoppingList = (fridge, wantedList) => {
+    return wantedList.map(groceryWantedList => { 
+      let groceryFridge = fridge.find( gf => gf.item === groceryWantedList.item); 
+      if  (groceryFridge===null){
+        return groceryWantedList;
+      } else {
+        if (groceryFridge.quantity < groceryWantedList.quantity){
+          return {
+            item: groceryWantedList.item, 
+            quantity: groceryWantedList.quantity - groceryFridge.quantity
+          };
+      } 
+      else{ 
+        return null;
+      }
+    }
+  }).filter(item => item !== null);
 };
 
-printValuesOf(simpsonsCatchphrases, 'lisa', 'bart', 'homer');
+shoppingList (fridge, wantedList).forEach( (item) => {
+    console.log (`${item.item}: ${item.quantity}`);
+  })
