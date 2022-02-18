@@ -24,6 +24,15 @@ https://docs.google.com/presentation/d/1qipJsABpC0fKRGJjX14DvG9izl1tmyZRKel50TF0
    
 
 
+### The debugging Framework
+ 
+    * What did I expect to happen? I have to been able to say with my words what I expect that the program does
+    * It's actually broken? Sometimes the program is doing the right thing and is our understanding of what it has to do what is wrong
+    * What happened instead? What did the code in place of what I understood that it has to do?. "It didn't work" is not good enough we have to explain it 
+    * What I have tried so far? We have to see debugging as a loop in each interaction we trie different things if the thing that we try worked perfect we can finish the loop but if not it's not so bad, we know a little more about the system
+
+
+
 ### Ask for help
 
    At the end what you do is ask for help. Can be:
@@ -47,14 +56,6 @@ And there is not entirely far away from thee truth.
 Well, change the cap for a moment. And think in occasions when you have tried to help someone. It's not so easy. You need to understand first want they say that they want and then what they "truly" want, and then perhaps you can begin to help... It's not an easy task to help someone.
 
 So returning in our world as a coders. We need a framework a bit more elaborated that simply ask for help.
-
-### The debugging Framework
- 
-    * What did I expect to happen? I have to been able to say with my words what I expect that the program does
-    * It's actually broken? Sometimes the program is doing the right thing and is our understanding of what it has to do what is wrong
-    * What happened instead? What dis the code in place of what I understood that it has to do?. "It didn't work" is not good enough we have to explain it 
-    * What I have tried so far? We have to see debugging as a loop in each interaction we trie different things if the thing that we try worked perfect we can finish the loop but if not it's not so bad, we know a little more about the system
-
 ### Reading the code
 
     One of the first steps to understand a program is reading the code. To do this we have some tools that help us 
