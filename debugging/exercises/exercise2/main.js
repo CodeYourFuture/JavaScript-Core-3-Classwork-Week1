@@ -141,7 +141,7 @@ function render() {
   }
 }
 
-submit.addEventListener("click", (e) => {
+document.getElementById("submit").addEventListener("click", (e) => {
   e.preventDefault();
 
   let form = document.querySelector("form");
