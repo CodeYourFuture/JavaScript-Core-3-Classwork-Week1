@@ -1,5 +1,5 @@
 let launchReady = false;
-let fuelLevel = 17000;
+let fuelLevel = 22000;
 let thrustOn = false;
 let secondsTolaunch = 10;
 let interval;
