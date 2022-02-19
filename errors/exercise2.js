@@ -1,6 +1,7 @@
-let charge = function() {
-    if (sunny) {
-        useSolarCells();
-    } else {
-        promptBikeRide();
+let charge = function (sunny) {
+  if (sunny) {
+    useSolarCells();
+  } else {
+    promptBikeRide();
+  }
 };
