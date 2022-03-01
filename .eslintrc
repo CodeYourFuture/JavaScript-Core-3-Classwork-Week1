@@ -1,3 +1,5 @@
+// these are the peramiters of the project 
+
 {
   "parserOptions": {
     "ecmaVersion": 11
