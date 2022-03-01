@@ -1,2 +1,2 @@
-let ward = "hello";
-word.substring(1);
+let word = "hello";
+word.substring(1, 4);
