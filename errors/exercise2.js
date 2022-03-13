@@ -3,4 +3,5 @@ let charge = function() {
         useSolarCells();
     } else {
         promptBikeRide();
+    }
 };
