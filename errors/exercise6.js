@@ -3,8 +3,8 @@
 //      Item #2 on the list is eggs
 //      Item #3 on the list is milk
 
-let arr  ["bread", eggs", "milk"];
+let arr = ["bread", "eggs", "milk"];
 
-items.forEach(item, index -> {
-    console.log(`Item #${index + 1} on the list is ${item}`);
-};
+arr.forEach((item, index) => {
+  console.log(`Item #${index + 1} on the list is ${item}`);
+});
