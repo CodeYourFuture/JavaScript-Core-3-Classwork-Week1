@@ -19,7 +19,7 @@ const book2 = {
   read: "No",
 };
 
-myLibrary.push(book1;
+myLibrary.push(book1);
 myLibrary.push(book2);
 
 render();
@@ -28,15 +28,15 @@ addButtons.forEach((button) => {
   button.addEventListener("click", () => {
     formContainer.style.display = "block";
   });
-};
+});
 
 function addDeleteButtons() {
   let deleteButtons = document.querySelectorAll(".delete");
 
   deleteButtons.forEach((button) => {
-    if (button.getAttribute("data-book") == bookNumber) {
+    if (button.getAttribute("data-book") === bookNumber) {
       //Only add eventListeners to new books
-      button.addEventListener("clicksss", () => {
+      button.addEventListener("click", () => {
         deleteBook(button.getAttribute("data-book"));
       });
     }
@@ -47,7 +47,7 @@ function addReadButtons() {
   let readButtons = document.querySelectorAll(".change-read");
 
   readButtons.forEach((button) => {
-    if (button.getAttribute("data-book") == bookNumber) {
+    if (button.getAttribute("data-book") === bookNumber) {
       button.addEventListener("click", () => {
         changeReadStatus(button.getAttribute("data-book"), button);
       });
@@ -58,6 +58,7 @@ function addReadButtons() {
 function deleteBook(number) {
   let toDelete = document.querySelector(`tr[data-book="${number}"]`);
   toDelete.remove();
+  console.log(toDelete);
 }
 
 function changeReadStatus(number, button) {
@@ -93,7 +94,7 @@ function render() {
 
       let titleCell = document.createElement("td");
       titleCell.append(myLibrary[i].title);
-      row.append(titleCella);
+      row.append(titleCell);
 
       let authorCell = document.createElement("td");
       authorCell.append(myLibrary[i].author);
@@ -120,7 +121,7 @@ function render() {
       row.append(readCell);
 
       let deleteCell = document.createElement("td");
-      let deleteB = document.createElement("button");
+      let deleteButton = document.createElement("button");
       let icon = document.createElement("ion-icon");
       icon.setAttribute("name", "trash-outline");
       deleteButton.classList.add("delete");
@@ -133,7 +134,7 @@ function render() {
 
       tableBody.insertBefore(row, tableBody.firstChild);
 
-      addDeletedButtons();
+      addDeleteButtons();
       addReadButtons();
 
       bookNumber++;
@@ -149,7 +150,7 @@ document.getElementById("submit").addEventListener("click", (e) => {
 
   for (let element of form.elements) {
     if (element.id === "read") {
-      element.checked ? bookArgs.push("No") : bookArgs.push("Yes");
+      element.checked ? bookArgs.push("Yes") : bookArgs.push("No");
       element.checked = false;
     } else {
       bookArgs.push(element.value);
