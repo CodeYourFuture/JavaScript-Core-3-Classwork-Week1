@@ -9,14 +9,14 @@ function getTemperatureReport(cities) {
   let report = [];
 
   for (let i = 0; i < cities.length; i++) {
-    let temperature = Object.values(temperatureService(cities[i]));
-    report.push(`The temperature in ${cities[i]} is ${temperature[i]} degrees`);
+    let temperature = temperatureService(cities[i]);
+    report.push(`The temperature in ${cities[i]} is ${temperature} degrees`);
   }
   return report;
 }
 
-function temperatureService() {
-  let temperatureMap = {
+function temperatureService(city) {
+  let temparatureMap = {
     London: 10,
     Paris: 12,
     Barcelona: 17,
@@ -25,8 +25,7 @@ function temperatureService() {
     "São Paulo": 23,
     Lagos: 33,
   };
-
-  return temperatureMap;
+  return temparatureMap[city];
 }
 
 let report = getTemperatureReport(["London", "Paris", "São Paulo"]);
