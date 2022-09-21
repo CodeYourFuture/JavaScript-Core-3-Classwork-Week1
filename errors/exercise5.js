@@ -1,2 +1,2 @@
-let name;
+let name = "string";
 name.substring(1);
