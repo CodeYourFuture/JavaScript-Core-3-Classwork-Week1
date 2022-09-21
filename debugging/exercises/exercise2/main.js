@@ -29,7 +29,7 @@ addButtons.forEach((button) => {
     formContainer.style.display = "block";
   });
 });
-debugger;
+
 function addDeleteButtons() {
   let deleteButtons = document.querySelectorAll(".delete");
 
