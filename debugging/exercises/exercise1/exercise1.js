@@ -5,7 +5,7 @@ let secondsTolaunch = 10;
 let interval;
 
 const countDown = () => {
-  console.log(secondsTolaunch--);
+  console.log(secondsTolaunch);
   switch (secondsTolaunch) {
     case 7:
       console.log("Close Davy Jones" + "Locker..");
