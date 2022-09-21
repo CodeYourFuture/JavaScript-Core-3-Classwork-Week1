@@ -1,7 +1,7 @@
 const addButtons = document.querySelectorAll(".add-button");
 const formContainer = document.getElementById("form-container");
 const tableBody = document.getElementById("table-body");
-const submitted = document.getElementById("submitted");
+const submitted = document.getElementById("submit");
 
 let bookNumber = 0;
 let myLibrary = [];
