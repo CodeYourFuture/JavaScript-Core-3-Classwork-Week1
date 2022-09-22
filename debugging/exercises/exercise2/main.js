@@ -19,7 +19,8 @@ const book2 = {
   read: "No",
 };
 
-myLibrary.push(book1;
+// Syntax error line 23 - Missing a closing bracket ")". And fixed
+myLibrary.push(book1);
 myLibrary.push(book2);
 
 render();
@@ -28,7 +29,8 @@ addButtons.forEach((button) => {
   button.addEventListener("click", () => {
     formContainer.style.display = "block";
   });
-};
+});
+// Syntax error in line 32- Missing a closing bracket ")".
 
 function addDeleteButtons() {
   let deleteButtons = document.querySelectorAll(".delete");
@@ -36,7 +38,7 @@ function addDeleteButtons() {
   deleteButtons.forEach((button) => {
     if (button.getAttribute("data-book") == bookNumber) {
       //Only add eventListeners to new books
-      button.addEventListener("clicksss", () => {
+      button.addEventListener("click", () => {
         deleteBook(button.getAttribute("data-book"));
       });
     }
@@ -91,9 +93,10 @@ function render() {
 
       row.setAttribute("data-book", bookNumber);
 
+      // Reference error in line 99 - titleCella is not defined.
       let titleCell = document.createElement("td");
       titleCell.append(myLibrary[i].title);
-      row.append(titleCella);
+      row.append(titleCell);
 
       let authorCell = document.createElement("td");
       authorCell.append(myLibrary[i].author);
@@ -119,8 +122,10 @@ function render() {
       readCell.append(button);
       row.append(readCell);
 
+      // Reference error in lines 130, 131, 132 - deleteButton is not defined.
+      // Origin of error is in line 127 Type error -let deleteB.
       let deleteCell = document.createElement("td");
-      let deleteB = document.createElement("button");
+      let deleteButton = document.createElement("button");
       let icon = document.createElement("ion-icon");
       icon.setAttribute("name", "trash-outline");
       deleteButton.classList.add("delete");
@@ -132,8 +137,8 @@ function render() {
       row.append(deleteCell);
 
       tableBody.insertBefore(row, tableBody.firstChild);
-
-      addDeletedButtons();
+      // Reference error in line 141 - addDeletedButton is undefined.
+      addDeleteButtons();
       addReadButtons();
 
       bookNumber++;
@@ -141,7 +146,7 @@ function render() {
   }
 }
 
-document.getElementById("submit").addEventListener("click", (e) => {
+submit.addEventListener("click", (e) => {
   e.preventDefault();
 
   let form = document.querySelector("form");
@@ -149,7 +154,7 @@ document.getElementById("submit").addEventListener("click", (e) => {
 
   for (let element of form.elements) {
     if (element.id === "read") {
-      element.checked ? bookArgs.push("No") : bookArgs.push("Yes");
+      element.checked ? bookArgs.push("Yes") : bookArgs.push("No");
       element.checked = false;
     } else {
       bookArgs.push(element.value);
