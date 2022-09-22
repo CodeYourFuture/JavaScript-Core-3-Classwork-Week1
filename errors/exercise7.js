@@ -6,27 +6,33 @@
 //      ]
 
 function getTemperatureReport(cities) {
-    let report = [];
+  let report = [];
 
-    for(let i = 0; i < cities.length(); i++) {
-        let temperature = temperatureService(city[i]);
-        report.push(`The temperature in ${city[i]} is ${temperature} degrees`);
-    }
-    return report;
+  for (let i = 0; i < cities.length; i++) {
+    //syntax and user error, .length is a property not a method
+    let temperature = temperatureService(cities[i]);
+    //user and reference error, no array called city, just cities
+    report.push(`The temperature in ${cities[i]} is ${temperature} degrees`);
+  }
+  return report;
 }
 
-function temperatureService() {
-    let temparatureMap  = {
-        'London': 10,
-        'Paris': 12,
-        'Barcelona': 17,
-        'Dubai' 27,
-        'Mumbai': 29,
-        'São Paulo': 23
-        'Lagos': 33
-    
+function temperatureService(city) {
+  //missing a parameter user error
+  let temparatureMap = {
+    London: 10,
+    Paris: 12,
+    Barcelona: 17,
+    Dubai: 27,
+    //syntax error colon missing
+    Mumbai: 29,
+    "São Paulo": 23,
+    //missing comma after Sao Paulo - syntax error
+    Lagos: 33,
+  };
+  //missing closing bracket of object - syntax error
 
-    return temparatureMap[city];
+  return temparatureMap[city];
 }
 
 let report = getTemperatureReport(["London", "Paris", "São Paulo"]);
