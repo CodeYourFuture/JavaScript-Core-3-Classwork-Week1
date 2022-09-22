@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", ( ) => {
 		}
 	];
 	for (var i = 0; i<data.length; i++) {
-		if (data.text) {
+		if (data[i].text) {
 			const pElement = document.createElement("p");
 			const button = document.createElement("button");
 			button.type = "button"
@@ -39,5 +39,7 @@ document.addEventListener("DOMContentLoaded", ( ) => {
 		const ctrl = evt.target;
 		if (!ctrl.getAttribute('data-href')) {
 			document.location = ctrl.getAttribute('data-href');
-		}}))
+		}
 	})
+	)
+	});

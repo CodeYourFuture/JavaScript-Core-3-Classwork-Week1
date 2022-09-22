@@ -6,11 +6,11 @@
 //      ]
 
 function getTemperatureReport(cities) {
-    let report = [];
+let report = [];
 
     for(let i = 0; i < cities.length(); i++) {
-        let temperature = temperatureService(city[i]);
-        report.push(`The temperature in ${city[i]} is ${temperature} degrees`);
+        let temperature = temperatureService(cities[i]);
+        report.push(`The temperature in ${cities[i]} is ${temperature} degrees`);
     }
     return report;
 }
@@ -24,7 +24,7 @@ function temperatureService() {
         'Mumbai': 29,
         'São Paulo': 23
         'Lagos': 33
-    
+    };
 
     return temparatureMap[city];
 }
