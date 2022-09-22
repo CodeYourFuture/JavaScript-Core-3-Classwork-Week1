@@ -38,3 +38,5 @@ function temperatureService(city) {
 let report = getTemperatureReport(["London", "Paris", "São Paulo"]);
 
 console.log(report);
+
+//test
