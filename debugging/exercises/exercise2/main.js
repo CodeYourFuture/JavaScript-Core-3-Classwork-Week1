@@ -19,7 +19,7 @@ const book2 = {
   read: "No",
 };
 
-myLibrary.push(book1;
+myLibrary.push(book1);
 myLibrary.push(book2);
 
 render();
@@ -36,7 +36,7 @@ function addDeleteButtons() {
   deleteButtons.forEach((button) => {
     if (button.getAttribute("data-book") == bookNumber) {
       //Only add eventListeners to new books
-      button.addEventListener("clicksss", () => {
+      button.addEventListener("click", () => {
         deleteBook(button.getAttribute("data-book"));
       });
     }
@@ -93,7 +93,7 @@ function render() {
 
       let titleCell = document.createElement("td");
       titleCell.append(myLibrary[i].title);
-      row.append(titleCella);
+      row.append(titleCell);
 
       let authorCell = document.createElement("td");
       authorCell.append(myLibrary[i].author);
@@ -120,7 +120,7 @@ function render() {
       row.append(readCell);
 
       let deleteCell = document.createElement("td");
-      let deleteB = document.createElement("button");
+      let deleteButton = document.createElement("button");
       let icon = document.createElement("ion-icon");
       icon.setAttribute("name", "trash-outline");
       deleteButton.classList.add("delete");
@@ -133,8 +133,8 @@ function render() {
 
       tableBody.insertBefore(row, tableBody.firstChild);
 
-      addDeletedButtons();
-      addReadButtons();
+      addDeleteButtons();
+      addButtons();
 
       bookNumber++;
     }
@@ -149,7 +149,7 @@ document.getElementById("submit").addEventListener("click", (e) => {
 
   for (let element of form.elements) {
     if (element.id === "read") {
-      element.checked ? bookArgs.push("No") : bookArgs.push("Yes");
+      element.checked ? bookArgs.push("Yes") : bookArgs.push("Yes");
       element.checked = false;
     } else {
       bookArgs.push(element.value);
@@ -160,6 +160,6 @@ document.getElementById("submit").addEventListener("click", (e) => {
   }
 
   formContainer.style.display = "none";
-  addBookToLibrary(bookArgs[1], bookArgs[0], bookArgs[2], bookArgs[3]);
+  addBookToLibrary(bookArgs[0], bookArgs[1], bookArgs[2], bookArgs[3]);
   render();
 });

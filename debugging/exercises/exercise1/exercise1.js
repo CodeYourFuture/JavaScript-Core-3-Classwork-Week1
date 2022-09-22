@@ -8,13 +8,13 @@ const countDown = () => {
   console.log(secondsTolaunch--);
   switch (secondsTolaunch) {
     case 7:
-      console.log('Close Davy Jones' Locker..');
+      console.log("Close Davy Jones" + "Locker..");
       break;
     case 3:
-      console.log('Ignition...');
+      console.log("Ignition...");
       break;
     case 0:
-      console.log('Liftoff!');
+      console.log("Liftoff!");
       clearInterval(interval);
       break;
     default:
