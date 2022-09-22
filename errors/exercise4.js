@@ -1,5 +1,7 @@
 let numbers = { a: 13, b: 37, c: 42 };
 
 numbers.map(function (num) {
-    return num * 2;
+  return num * 2;
 });
+
+//type error, .map is a array method and cannot be performed on an object
