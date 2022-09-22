@@ -1,5 +1,5 @@
 const tomatoes = 'tomatoes';
-const chocolate= 'chocolate'yummy';
+const chocolate= 'chocolate';
 const yogurt = 'yogurt';
 const rice = "rice";
 
