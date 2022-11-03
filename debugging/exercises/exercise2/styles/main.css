@@ -223,6 +223,7 @@ td button {
 
   #form-container {
     margin-top: 5vh;
+    display: none;
   }
 
   #inputs-container {
