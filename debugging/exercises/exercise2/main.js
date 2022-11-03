@@ -1,7 +1,8 @@
-const addButtons = document.querySelectorAll(".add-button");
+// const addButtons = document.querySelectorAll(".add-button");
 const formContainer = document.getElementById("form-container");
 const tableBody = document.getElementById("table-body");
 const submitted = document.getElementById("submitted");
+const btn = document.getElementById("add-button-desktop");
 
 let bookNumber = 0;
 let myLibrary = [];
@@ -19,16 +20,21 @@ const book2 = {
   read: "No",
 };
 
-myLibrary.push(book1;
+myLibrary.push(book1);
 myLibrary.push(book2);
 
 render();
 
-addButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    formContainer.style.display = "block";
-  });
-};
+// addButtons.forEach((button) => {
+//   button.addEventListener("click", () => {
+//     formContainer.style.display = "block";
+//   });
+// });
+
+btn.addEventListener('click', () =>{
+  console.log('hello');
+})
+
 
 function addDeleteButtons() {
   let deleteButtons = document.querySelectorAll(".delete");
@@ -36,7 +42,7 @@ function addDeleteButtons() {
   deleteButtons.forEach((button) => {
     if (button.getAttribute("data-book") == bookNumber) {
       //Only add eventListeners to new books
-      button.addEventListener("clicksss", () => {
+      button.addEventListener("click", () => {
         deleteBook(button.getAttribute("data-book"));
       });
     }
@@ -75,7 +81,7 @@ function changeReadStatus(number, button) {
 }
 
 function addBookToLibrary(title, author, pages, read) {
-  let book = { title: title, author: author, page: pages, read: read };
+  let book = { title, author, pages, read };
   myLibrary.push(book);
 }
 
@@ -93,7 +99,7 @@ function render() {
 
       let titleCell = document.createElement("td");
       titleCell.append(myLibrary[i].title);
-      row.append(titleCella);
+      row.append(titleCell);
 
       let authorCell = document.createElement("td");
       authorCell.append(myLibrary[i].author);
@@ -123,12 +129,12 @@ function render() {
       let deleteB = document.createElement("button");
       let icon = document.createElement("ion-icon");
       icon.setAttribute("name", "trash-outline");
-      deleteButton.classList.add("delete");
-      deleteButton.setAttribute("type", "button");
-      deleteButton.setAttribute("data-book", bookNumber);
+      deleteB.classList.add("delete");
+      deleteB.setAttribute("type", "button");
+      deleteB.setAttribute("data-book", bookNumber);
 
-      deleteButton.append(icon);
-      deleteCell.append(deleteButton);
+      deleteB.append(icon);
+      deleteCell.append(deleteB);
       row.append(deleteCell);
 
       tableBody.insertBefore(row, tableBody.firstChild);
