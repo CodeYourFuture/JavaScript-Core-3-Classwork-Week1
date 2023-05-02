@@ -1,2 +1,2 @@
-let name;
-name.substring(1);
+let name = "name";
+let firstLetter = name.substring(1);
